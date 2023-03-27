@@ -1,0 +1,27 @@
+.container {
+  padding: 0 0 1em 0;
+  margin-top: 0.5em;
+  width: 10em;
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover {
+  width: 100%;
+}
+
+.container h2,
+.favIcon {
+  padding: 0 1em;
+}
+
+h2 {
+    margin-top: 1em;
+}
+
+.favIcon {
+  margin-top: 1em;
+  width: 3em;
+}

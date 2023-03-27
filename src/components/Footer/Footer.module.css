@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  padding: 2% 10%;
+}
+
+footer h2 {
+  font-weight: 400;
+  color: var(--white);
+}
