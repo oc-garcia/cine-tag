@@ -10,8 +10,8 @@ export default function Header() {
         <img src={logo} alt="Cine Tag Logo" />
       </Link>
       <nav>
-        <HeaderLink url="./">Home</HeaderLink>
-        <HeaderLink url="./Favoritos">Favoritos</HeaderLink>
+        <HeaderLink url="/">Home</HeaderLink>
+        <HeaderLink url="/Favorites">Favorites</HeaderLink>
       </nav>
     </header>
   );

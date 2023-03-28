@@ -1,20 +1,25 @@
 import React from "react";
+
+import styles from "./Home.module.css";
+
 import Banner from "../../components/Banner";
 import Card from "../../components/Card";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import Title from "../../components/Title";
+
+import movies from "../../json/db.json";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <Banner image="home" />
       <Title>
-        <h1>Um lugar para guardar seus vídeos e filmes!</h1>
+        <h1>A place for you to gather your favorite movies and series!</h1>
       </Title>
-      <Card id="1" title="title" cover="https://cdn2.thecatapi.com/images/13i.gif" />
-      <Footer />
+      <section className={styles.container}>
+        {movies.map((movie) => {
+          return <Card key={movie.Title} title={movie.Title} cover={movie.Images[0]} />;
+        })}
+      </section>
     </>
   );
 }
