@@ -22,7 +22,7 @@ export default function Favorites() {
       )}
       <section className={styles.container}>
         {favorite.map((movie) => {
-          return <Card key={movie.title} id={movie.title} title={movie.title} cover={movie.cover} />;
+          return <Card key={movie.id} id={movie.id} title={movie.title} cover={movie.cover} />;
         })}
       </section>
     </>

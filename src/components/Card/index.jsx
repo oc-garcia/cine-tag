@@ -3,16 +3,12 @@ import favIcon from "./favorite_outline.png";
 import unFavIcon from "./favorite.png";
 import { useFavoriteContext } from "../../hooks/FavoriteContext";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 export default function Card({ id, title, cover, plot }) {
   const { favorite, toggleFavorite } = useFavoriteContext();
 
-  const [icon, setIcon] = useState();
-  useEffect(() => {
-    const isFavorite = favorite.some((fav) => fav.id === id);
-    isFavorite ? setIcon(unFavIcon) : setIcon(favIcon);
-  });
+  const isFavorite = favorite.some((fav) => fav.id === id);
+  const icon = isFavorite ? unFavIcon : favIcon;
 
   return (
     <div className={styles.container}>
