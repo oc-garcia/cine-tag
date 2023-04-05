@@ -4,6 +4,7 @@ import Favorites from "./pages/favorites/index.jsx";
 import Header from "./components/Header/index.jsx";
 import Footer from "./components/Footer/index.jsx";
 import FavoriteProvider from "./hooks/FavoriteContext.jsx";
+import Player from "./pages/player/index.jsx";
 
 export default function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ export default function AppRoutes() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="/:id" element={<Player />} />
           </Routes>
         </FavoriteProvider>
       </main>
