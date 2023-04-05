@@ -17,7 +17,7 @@ export default function Home() {
       </Title>
       <section className={styles.container}>
         {movies.map((movie) => {
-          return <Card key={movie.Title} title={movie.Title} cover={movie.Images[0]} />;
+          return <Card key={movie.Title} id={movie.Title} title={movie.Title} cover={movie.Images[0]} />;
         })}
       </section>
     </>
