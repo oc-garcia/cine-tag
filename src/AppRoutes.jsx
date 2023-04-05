@@ -5,6 +5,7 @@ import Header from "./components/Header/index.jsx";
 import Footer from "./components/Footer/index.jsx";
 import FavoriteProvider from "./hooks/FavoriteContext.jsx";
 import Player from "./pages/player/index.jsx";
+import NotFound from "./pages/notfound/index.jsx";
 
 export default function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ export default function AppRoutes() {
             <Route path="/" element={<Home />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/:id" element={<Player />} />
+            <Route path="/*" element={<NotFound />} />
           </Routes>
         </FavoriteProvider>
       </main>
